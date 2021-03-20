@@ -63,7 +63,7 @@ def load_module(shortname):
         mod.borg = bot
         mod.lethalbot = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_hell = delete_hell
+        mod.delete_lethal = delete_lethal
         # support for hellbot originals
         sys.modules["raider.utils"] = userbot.utils
         sys.modules["RAIDER"] = userbot
