@@ -15,7 +15,7 @@ Made With Love By LETHAL FIGHTERS
 """
                                                                                                             
 print("")
-print(Style.BRIGHT + Fore.MAGENTA + kraken)
+print(Style.BRIGHT + Fore.MAGENTA)
 print(Style.RESET_ALL)
 print(Style.BRIGHT + Fore.BLUE + logo)
 print(Style.RESET_ALL)
@@ -39,7 +39,7 @@ while True:
             )
 
             print(
-                "Thanks for Choosing HellBot Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
+                "Thanks for Choosing lethalBot Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
             )
     except:
         print("")
