@@ -4,19 +4,19 @@
 _get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $HELL_REPO == "🇱 ETHAL 🇺 SERBOT" ]]
+    if [[ $LETHAL_REPO == "🇱 ETHAL 🇺 SERBOT" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZVZhZGVycy9WYWRlci9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
-    elif [[ $HELL_REPO == "🇱 ᴇᴛʜᴀʟ 🇺 ꜱᴇʀʙᴏᴛ" ]]
+    elif [[ $LETHAL_REPO == "🇱ETHAL 🇺SERBOT" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZVZhZGVycy9WYWRlci9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
-    elif [[ $HELL_REPO =~ $regex ]]
+    elif [[ $LETHAL =~ $regex ]]
     then
-        if [[ $HELL_REPO_BRANCH ]]
+        if [[ $LETHAL_REPO_BRANCH ]]
         then
-            echo "${HELL_REPO}/archive/${HELL_REPO_BRANCH}.zip"
+            echo "${LETHAL_REPO}/archive/$LETHAL_REPO_BRANCH}.zip"
         else
-            echo "${HELL_REPO}/archive/master.zip"
+            echo "${LETHAL_REPO}/archive/master.zip"
         fi
     else
         echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZVZhZGVycy9WYWRlci9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
@@ -26,19 +26,19 @@ _get_repolink () {
 
 _set_bot () {
     local zippath
-    zippath="hellbot.zip"
+    zippath="Lethaluserbot.zip"
     echo "  Downloading source code ..."
     wget -q $(_get_repolink) -O "$zippath"
     echo "  Unpacking Data ..."
-    HELLPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
+    LETHALPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
     echo "Done"
     echo "  Cleaning ..."
     rm -rf "$zippath"
     sleep 5
-    cd $HELLPATH
-    echo "    Starting HellBot    "
-    echo "🇱 ᴇᴛʜᴀʟ 	🇺 ꜱᴇʀʙᴏᴛ
+    cd $LETHALPATH
+    echo "    Starting LETHAL Bot    "
+    echo "🇱ETHAL    🇺SERBOT
     
                               "
 
